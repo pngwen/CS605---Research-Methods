@@ -1,0 +1,178 @@
+% Uncomment for handout
+%\def\HANDOUT{}
+
+
+\ifdefined\HANDOUT
+\documentclass[handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\else
+\documentclass{beamer}
+\fi
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \definecolor{sered}{rgb}{0.78, 0.06, 0.18}
+  \definecolor{richblack}{rgb}{0.0, 0.0, 0.0}
+  \setbeamercolor{structure}{fg=sered,bg=richblack}
+  %\setbeamercovered{transparent}
+}
+
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{esvect}
+
+\makeatletter
+\newcommand{\imagesource}[1]{{\centering\hfill\break\hbox{\scriptsize Image Source:\thinspace{\tiny\itshape #1}}\par}}
+\newcommand{\image}[3][\@nil]{%
+        \def\tmp{#1}%
+        \begin{center}
+        \ifx\tmp\@nnil
+            \includegraphics[max height = 0.55\textheight, max width = \textwidth]{images/#2}
+        \else
+            \includegraphics[max height = 0.50\textheight, max width = \textwidth]{images/#2}
+            \linebreak
+            #1
+        \fi
+        \linebreak
+        {\tiny Image Source:\thinspace{\tiny #3}}
+        \end{center}
+}
+
+\newenvironment{code}{%
+ \VerbatimEnvironment
+ \begin{adjustbox}{max width=\textwidth, max height=0.7\textheight}
+ \begin{BVerbatim}
+  }{
+  \end{BVerbatim}
+ \end{adjustbox}
+}
+
+\title{03 - Gathering Sources}
+
+
+\author{Robert Lowe}
+
+\institute[Southeast Missouri State University] % (optional, but mostly needed)
+{
+  Department of Computer Science\\
+  Southeast Missouri State University
+}
+
+\date[]{}
+\subject{}
+
+\pgfdeclareimage[height=1.0cm]{university-logo}{images/semo-logo}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+\begin{frame}{What is the purpose of research?}
+    \begin{columns}
+    \column{0.6\textwidth}
+        \begin{block}{}
+        If I have seen further it is by standing on the shoulders of giants.
+        \linebreak
+        {\scriptsize--Sir Isaac Newton, 1676 Letter to Robert Hooke}
+        \end{block}
+        
+        \begin{itemize}
+            \item The purpose of research is to increase the sum of human knowledge.
+            \item Each paper builds on past papers.
+            \item Each paper must be unique, it must contribute something new.
+        \end{itemize}
+        
+    \column{0.4\textwidth}
+    \image[Sir Isaac Newton\linebreak (1643 - 1727)]{newton}{\href{https://en.wikipedia.org/wiki/Isaac_Newton}{Wikipedia}}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Finding Sources}
+    \begin{itemize}
+        \item Graduate students once practically lived in libraries.
+        \item Today, research is done online through various electronic databases.
+        \item Two important sources for you:
+        \begin{itemize}
+           \item \href{https://scholar.google.com}{scholar.google.com}
+           \item \href{https://library.semo.edu/find-materials/articles-and-databases}{Kent Library Articles and Databases}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Some Prominant CS Databases}
+    \begin{description}
+        \item[ACM] - Association for Computing Machinery
+        \item[IEEE] - The Institute of Electrical and Electronics Engineers 
+        \item[SIAM] - Society for Industrial and Applied Mathematics
+        \item[Springer] - Publisher of Many Scientific and Technical Works
+    \end{description}
+\end{frame}
+
+\begin{frame}{Tools For Collaboration}
+    To help you work with your groups, I have created two primary means of collaboration:
+    \begin{itemize}
+        \item Microsoft Teams Group Channel
+        \begin{itemize}
+            \item Share Files
+            \item Text Chat
+            \item Video Chat
+        \end{itemize}
+        \item Overleaf Group Project
+        \begin{itemize}
+            \item Write your LateX documents.
+            \item Chat
+            \item I can see your writing to help with \LaTeX questions.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Assignment}
+    \begin{itemize}
+        \item \href{https://semo.instructure.com/courses/9573/assignments/82356?module_item_id=340086}{Gathering Sources}
+    \end{itemize}
+\end{frame}
+
+
+\end{document}
