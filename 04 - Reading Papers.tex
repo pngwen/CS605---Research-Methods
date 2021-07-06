@@ -1,0 +1,233 @@
+% Uncomment for handout
+\def\HANDOUT{}
+
+
+\ifdefined\HANDOUT
+\documentclass[handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\else
+\documentclass{beamer}
+\fi
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \definecolor{sered}{rgb}{0.78, 0.06, 0.18}
+  \definecolor{richblack}{rgb}{0.0, 0.0, 0.0}
+  \setbeamercolor{structure}{fg=sered,bg=richblack}
+  %\setbeamercovered{transparent}
+}
+
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\imagesource}[1]{{\centering\hfill\break\hbox{\scriptsize Image Source:\thinspace{\tiny\itshape #1}}\par}}
+\newcommand{\image}[2]{%
+        \begin{center}
+        \includegraphics[max height = 0.55\textheight, max width = \textwidth]{images/#1}
+        \linebreak
+        {\tiny Image Source:\thinspace{\tiny #2}}
+        \end{center}
+}
+
+\newenvironment{code}{%
+ \VerbatimEnvironment
+ \begin{adjustbox}{max width=\textwidth, max height=0.7\textheight}
+ \begin{BVerbatim}
+  }{
+  \end{BVerbatim}
+ \end{adjustbox}
+}
+
+\title{04 - Reading Papers}
+
+
+\author{Robert Lowe}
+
+\institute[Southeast Missouri State University] % (optional, but mostly needed)
+{
+  Department of Computer Science\\
+  Southeast Missouri State University
+}
+
+\date[]{}
+\subject{}
+
+\pgfdeclareimage[height=1.0cm]{university-logo}{images/semo-logo}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+\section{Reading Papers}
+\begin{frame}{What to Avoid}
+    \image{conspiracy}{It's Always Sunny in Philadelphia, Season 4 Episode 10}
+\end{frame}
+
+\begin{frame}{Typical Layout of a Scholarly Paper}
+    \begin{enumerate}
+        \item Abstract
+        \item Introduction 
+        \item Related Works
+        \item Method / Experiments
+        \item Conclusions
+        \item Bibliography
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Reading Sequence}
+    \begin{block}{}
+        {\bf Pro Tip:} Scholarly articles are functional documents. 
+        They are not typically meant to be consumed like magazines or books!
+    \end{block}
+    
+    \begin{enumerate}
+        \item {\bf Quick Scan} - Determine what this paper says, and determine if it is
+          relevant.
+        \item {\bf Citation Exploration} - Determine how this paper fits into its body
+          of literature. Identify additional papers to read.
+        \item {\bf In-Depth Reading} - Study the paper, especially the methodology. This 
+          is where you learn the details of the author's contribution.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Quick Scan}
+
+    {\bf Procedure}
+    \begin{enumerate}
+        \item Read the abstract.
+        \item Read the conclusions.
+    \end{enumerate}
+    
+    \vspace{1em}
+    
+    {\bf Goals}
+    \begin{itemize}
+        \item Determine relevance.
+        \item Determine importance of the results.
+        \item Identify the author's claimed contributions.
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{Citation Exploration}
+
+    {\bf Procedure}
+    \begin{enumerate}
+        \item Read the Introduction.
+        \item Read the Related Works.
+        \item Scan the Bibliography.
+    \end{enumerate}
+    
+    \vspace{1em}
+    
+    {\bf Goals}
+    \begin{itemize}
+        \item Determine how this paper's conclusions follow from previous work.
+        \item Identify other papers that may be relevant to your own work.
+        \item Identify which papers are likely to be needed to provide details for
+          the current paper's methodology.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{In-Depth Reading}
+
+    {\bf Procedure}
+    \begin{enumerate}
+        \item Read the Method / Experiment Section.
+        \item Re-Read the Conclusion.
+        \item Read any papers needed to clarify the methodology.
+    \end{enumerate}
+    
+    \vspace{1em}
+    
+    {\bf Goals}
+    \begin{itemize}
+        \item Gain an understanding of what methods the author used.
+        \item Determine how well the experiment supports the conclusions.
+        \item Try to form ideas about the following:
+        \begin{itemize}
+            \item Is this method directly applicable to my current work?
+            \item Can I somehow improve upon the author's method?
+        \end{itemize}
+    \end{itemize}
+    
+\end{frame}
+
+\section{Taking Notes}
+\begin{frame}{Taking Notes}
+    \begin{block}{}
+        Throughout all your reading, you should be taking and gathering notes.
+    \end{block}
+    
+    \begin{enumerate}
+        \item Annotate the papers themselves.
+        \item Gather notes into one location.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Annotation}
+    \begin{itemize}
+        \item Use a tool such as OneNote to directly annotate papers.
+        \item Highlight sections relevant to you.
+        \item Add your own handwritten notes in margins.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Note Gathering}
+    \begin{itemize}
+        \item Annotations on papers are not sufficient.
+        \item Gather your notes into one document, typically typeset in latex.
+        \item Your typeset notes should contain:
+        \begin{itemize}
+            \item Summaries and paraphrases of your annotations.
+            \item Typeset any relevant formulae from the paper.
+            \item A few sentences summarizing the paper.
+            \item A few sentences summarizing the relevance of this paper to your own work.
+            \item A list of references from this paper which you plan to read.
+            \item Any other relevant information you have gained from this paper.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\end{document}

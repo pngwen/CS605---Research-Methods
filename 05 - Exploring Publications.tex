@@ -1,5 +1,5 @@
 % Uncomment for handout
-%\def\HANDOUT{}
+\def\HANDOUT{}
 
 
 \ifdefined\HANDOUT
@@ -58,7 +58,7 @@
  \end{adjustbox}
 }
 
-\title{Beamer Template for SEMO}
+\title{05 - Exploring Publications}
 
 
 \author{Robert Lowe}
@@ -113,44 +113,84 @@
 % - If you omit details that are vital to the proof/implementation,
 %   just say so once. Everybody will be happy with that.
 
-\section{Part 1}
-\begin{frame}
-  \frametitle{Normal Frame}
-  \begin{itemize}
-    \item item 1
-    \item item 2
-  \end{itemize}
+\section{Types of Publications}
+
+\begin{frame}{Project Publication Order}
+    \begin{enumerate}
+        \item Poster
+        \item Conference Paper
+        \item Journal or Book Chapter
+        \item Book
+    \end{enumerate}
 \end{frame}
 
-
-\begin{frame}[fragile]
-  \frametitle{code frame}
-  \begin{block}{multsh}
-\begin{code}
-...
-#start the scr server
-busybox telnetd -p 1337 -l multsh-login
-
-#start the screen session
-screen -S multsh
-
-#shutdown once screen exits
-killall busybox
-  \end{code}
-  \end{block}
+\begin{frame}{Conferences}
+    \begin{itemize}
+        \item Classifications: Local, State, Regional, and International
+        \item Can be either peer reviewed or general acceptance.
+        \item Prestige often determined by size and acceptance rate.
+        \item Two types of articles:
+        \begin{itemize}
+            \item \textbf{Poster} Presented during a poster session, and typically reports preliminary findings.
+            \item \textbf{Conference Paper} Write and presentation presents a fully formed, but still new, idea.
+        \end{itemize}
+    \end{itemize}
 \end{frame}
 
-
-\begin{frame}
-  \frametitle{multicolumn}
-  \begin{columns}
-  \column{0.5\textwidth}
-  \begin{block}{left}
-  \end{block}
-  \column{0.5\textwidth}
-  \image[Alan Turing]{turing}{Wikimedia Commons}
-  \end{columns}
+\begin{frame}{Journals}
+    \begin{itemize}
+        \item Journals contain long form articles.
+        \item Journals are typically rated by impact factor:
+        \[
+        IF_y = \dfrac{Citations_y}{Publications_{y-1}+Publications_{y-2}}
+        \]
+        \item Types of journal articles:
+        \begin{itemize}
+            \item Original Research
+            \item Short Reports or Letters
+            \item Review Articles / Survey Articles
+            \item Case Studies
+            \item Methodologies and Methods
+        \end{itemize}
+    \end{itemize}
 \end{frame}
 
+\begin{frame}{Book Chapters}
+    \begin{columns}
+    
+    \column{0.5\textwidth}
+    \begin{itemize}
+        \item Bound volumes of research.
+        \item Similar to journals.
+        \item One-Off, not periodical
+    \end{itemize}
+    
+    \column{0.5\textwidth}
+    \image{recent-trends}{Springer}
+    
+    \end{columns}
+\end{frame}
+
+\section{Citation Tracking}
+
+\begin{frame}{Citation Tree}
+    \begin{columns}
+    \column{0.5\textwidth}
+    \begin{itemize}
+        \item Every article has sources.
+        \item (Hopefully) Articles will be sources for others.
+        \item Look forewords and backwards is important!
+    \end{itemize}
+    \column{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/citations}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Finding Citations}
+    \begin{itemize}
+        \item Most databases will list a document's citations.
+        \item For going backwards, simply use the document's references.
+        \item For going foreword, use tools such as Google Scholar's ``Cited By'' feature.
+    \end{itemize}
+\end{frame}
 \end{document}
-
