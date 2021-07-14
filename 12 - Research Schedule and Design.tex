@@ -1,0 +1,184 @@
+% Uncomment for handout
+%\def\HANDOUT{}
+
+
+\ifdefined\HANDOUT
+\documentclass[handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\else
+\documentclass{beamer}
+\fi
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \definecolor{sered}{rgb}{0.78, 0.06, 0.18}
+  \definecolor{richblack}{rgb}{0.0, 0.0, 0.0}
+  \setbeamercolor{structure}{fg=sered,bg=richblack}
+  %\setbeamercovered{transparent}
+}
+
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{esvect}
+
+\makeatletter
+\newcommand{\imagesource}[1]{{\centering\hfill\break\hbox{\scriptsize Image Source:\thinspace{\tiny\itshape #1}}\par}}
+\newcommand{\image}[3][\@nil]{%
+        \def\tmp{#1}%
+        \begin{center}
+        \ifx\tmp\@nnil
+            \includegraphics[max height = 0.55\textheight, max width = \textwidth]{images/#2}
+        \else
+            \includegraphics[max height = 0.50\textheight, max width = \textwidth]{images/#2}
+            \linebreak
+            #1
+        \fi
+        \linebreak
+        {\tiny Image Source:\thinspace{\tiny #3}}
+        \end{center}
+}
+
+\newenvironment{code}{%
+ \VerbatimEnvironment
+ \begin{adjustbox}{max width=\textwidth, max height=0.7\textheight}
+ \begin{BVerbatim}
+  }{
+  \end{BVerbatim}
+ \end{adjustbox}
+}
+
+\title{Research Schedule and Design}
+
+
+\author{Robert Lowe}
+
+\institute[Southeast Missouri State University] % (optional, but mostly needed)
+{
+  Department of Computer Science\\
+  Southeast Missouri State University
+}
+
+\date[]{}
+\subject{}
+
+\pgfdeclareimage[height=1.0cm]{university-logo}{images/semo-logo}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+\section{Schedule}
+\begin{frame}{Typical Schedule Components}
+\begin{columns}
+    \column{0.3\textwidth}
+    \begin{itemize}
+        \item Timeline
+        \item Milestones
+        \item Budget
+    \end{itemize}
+    
+    
+    \column{0.7\textwidth}
+    \image[Gantt Chart]{gantt-chart}{\href{https://ccts.osu.edu/sites/default/files/inline-files/Gantt\%20Chart\%20Example.pdf}{Project Management for Research}}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Timeline}
+    \begin{itemize}
+        \item When do we expect to have deliverables?
+        \item When will we publish?
+        \item How many papers do we expect to produce?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Milestones}
+    \begin{itemize}
+        \item What are the major elements of our research?
+        \item What accomplishments will we make over time?
+        \item How long do we expect each phase to last?
+        \item In what order must the milestones be accomplished?
+        \item How are the milestones interrelated?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Budget}
+    \begin{itemize}
+        \item How much will the research cost?
+        \item How will the researchers be paid?
+        \item What are the material costs of this research?
+    \end{itemize}
+\end{frame}
+
+\section{Design}
+
+\begin{frame}{Design Goals}
+    A good research project is:
+    \begin{itemize}
+        \item Verifiable
+        \item Repeatable
+        \item Statistically Sound
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Design Questions}
+    \begin{itemize}
+        \item How will we gather data?
+        \item What sort of data will we gather?
+        \item How will we evaluate the data?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Data and Code Publication}
+    \begin{itemize}
+        \item Increasingly, researchers are expected to make their code public.
+        \item Several code and data venues exist.
+    \end{itemize}
+\end{frame}
+
+\end{document}
